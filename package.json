@@ -1,6 +1,6 @@
 {
   "name": "mysupermodalbytristan",
-  "version": "0.2.6",
+  "version": "0.2.7",
   "description": "Création d'une modale",
   "main": "dist/main.js",
   "module": "dist/main.js",
