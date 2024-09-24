@@ -1,19 +1,28 @@
 {
   "name": "mysupermodalbytristan",
-  "version": "0.1.0",
-  "main": "dist/index.js",  "module": "dist/index.js",  
-  "files": [ "dist", "README.md" ],  
-  "repository": {    "type": "git",    "url": "URL_OF_YOUR_REPOSITORY"  },
+  "version": "0.2.0",
+  "description": "Création d'une modale",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Zargan59/Modale"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-    
+    "gh-pages": "^6.1.1",
+    "rollup": "^2.79.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "rm -rf dist && NODE_ENV=production babel src/lib --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,__snapshots__",
+    "build": "webpack --config webpack.config.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -36,9 +45,16 @@
     ]
   },
   "devDependencies": {
+    "@babel/core": "^7.25.2",
+    "@babel/preset-env": "^7.25.4",
+    "@babel/preset-react": "^7.24.7",
+    "babel-cli": "^6.26.0",
+    "babel-loader": "^9.2.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-scripts": "5.0.1",
-    "babel-cli": "^6.26.0"
+    "webpack": "^5.94.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.1.0"
   }
 }
