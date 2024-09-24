@@ -11,21 +11,25 @@ module.exports = {
   },
   module: {
     rules: [
-      {
-        test: /\.(js|jsx)$/, // Extensions JS ou JSX
-        exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader'
+        {
+          test: /\.(js|jsx)$/,
+          exclude: /node_modules/,
+          use: {
+            loader: 'babel-loader'
+          }
+        },
+        {
+          test: /\.css$/,  // Ajout du CSS loader
+          use: ['style-loader', 'css-loader']
         }
-      }
-    ]
-  },
-  resolve: {
-    extensions: ['.js', '.jsx'], // Résolution des extensions
-  },
-  externals: {
-    react: 'react', // Exclut React de la compilation, on suppose que React est fourni par l'application qui utilise la bibliothèque
-    'react-dom': 'react-dom'
-  },
-  mode: 'production', // Mode production pour optimiser le bundle
-};
+      ]
+    },
+    resolve: {
+      extensions: ['.js', '.jsx']
+    },
+    externals: {
+      react: 'react',
+      'react-dom': 'react-dom'
+    },
+    mode: 'production'
+  };
