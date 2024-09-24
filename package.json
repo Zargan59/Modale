@@ -2,8 +2,8 @@
   "name": "mysupermodalbytristan",
   "version": "0.2.3",
   "description": "Création d'une modale",
-  "main": "dist/index.js",
-  "module": "dist/index.js",
+  "main": "dist/main.js",
+  "module": "dist/main.js",
   "files": [
     "dist",
     "README.md"
